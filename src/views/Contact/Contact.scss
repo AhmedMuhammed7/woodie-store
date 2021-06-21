@@ -1,0 +1,27 @@
+@import '../../sass/helpers/variables';
+@import '../../sass/helpers/mixins';
+.contact {
+    .text {
+        .hint {
+            color : $pale;
+            &::after {
+               content: '';
+               display: block;
+               border-bottom: 1px solid $light;
+               width: 135px;
+               margin-top: 25px;
+            }
+        }
+        .description {
+            color: $pale;
+            line-height: 1.7;
+            @include res(xs) {
+                br {
+                    display: none;
+                }
+            }
+        }
+        
+    }
+    
+}

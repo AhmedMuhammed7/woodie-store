@@ -1,0 +1,111 @@
+ //Start Global Mixins
+
+//Mixin of Overlay
+@mixin overlay($colorCode, $colorOpacity) {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba($colorCode, $colorOpacity);
+    //position:absolute
+}
+
+
+//Prefixer Mixin
+@mixin prefixer ($property, $value, $prefixes :()) {
+    @each $prefix in $prefixes {
+        #{"-" + $prefix + "-" + $property} : $value;
+    }
+    #{$property} :$value;
+}
+
+//ResPonsive Mixin
+
+@mixin res($breakpoint) {
+  
+  @if $breakpoint == xs {
+    @media (max-width: 576px) {
+      @content;
+    } 
+  }
+    
+  @if $breakpoint == sm {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == md {
+    @media (max-width: 992px) {
+      @content;
+    } 
+  }
+  
+  @if $breakpoint == lg {
+    @media (min-width: 992px) {
+      @content;
+    } 
+  }
+    
+  @if $breakpoint == xl {
+    @media (min-width: 1200px) {
+      @content;
+    } 
+  }
+  
+}
+
+
+
+//prefixer mixin for animation keyFrame
+@mixin keyFrame ($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    };
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    };
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    };
+    @-o-keyframes #{$animation-name} {
+        @content;
+    };
+    @keyframes #{$animation-name} {
+        @content;
+    };
+}
+//End Global Mixins
+
+//Headeings
+@mixin fit ($fontSize, $color, $lineHeight) {
+    font-size: $fontSize;
+    color: $color;
+    line-height: $lineHeight;
+}
+@mixin headSize ($fontSize, $lineHeight) {
+    font-size: $fontSize;
+    line-height: $lineHeight;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

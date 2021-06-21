@@ -1,0 +1,20 @@
+@import "../../sass/helpers/variables";
+@import "../../sass/helpers/mixins";
+.image-input {
+  .image-input-label {
+    cursor: pointer;
+    img {
+      width: 30px;
+    }
+  }
+  .images-box {
+    background-color: rgba($lightenDark, 0.2);
+    height: 200px !important;
+  }
+  .handel-width {
+    width: 28% !important;
+    @include res(sm) {
+      width: 50% !important;
+    }
+  }
+}

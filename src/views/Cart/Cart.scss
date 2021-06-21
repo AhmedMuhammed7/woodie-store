@@ -1,0 +1,13 @@
+@import "../../sass/helpers/variables.scss";
+@import "../../sass/helpers/mixins.scss";
+
+.cart {
+  .cart-head {
+    border: 1px solid rgba($pale, 0.1);
+    margin-bottom: 30px;
+    color: $pale;
+    @include res(sm) {
+      display: none !important;
+    }
+  }
+}

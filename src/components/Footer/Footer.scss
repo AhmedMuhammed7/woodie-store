@@ -1,0 +1,47 @@
+@import "../../sass/helpers/variables";
+@import "../../sass/helpers/mixins";
+
+footer {
+  border-top: 1px solid rgba($pale, 0.1) !important;
+  
+  form {
+    background-color: rgba($pale, 0.1);
+    padding: 30px 50px;
+    border-radius: 150px 150px 150px 0;
+    input {
+      background: none;
+      font-size: 25px;
+      color: rgba($pale, 0.5);
+      &::selection {
+        background: $light;
+        color: $white;
+      }
+      &::placeholder {
+        color: inherit;
+      }
+    }
+    button {
+      border: 2px solid $light;
+      color: $white;
+      letter-spacing: 2px;
+      font-weight: bold;
+      border-radius: 40px;
+      padding: 15px 30px;
+      font-size: 15px;
+      background-color: rgba($pale, 0.1);
+      transition: 0.3s;
+      &:hover {
+        background-color: $light;
+      }
+    }
+  }
+  .content {
+    @include res(sm){
+      flex-direction: column !important;
+    }
+  }
+  p {
+      letter-spacing: 1px;
+  }
+  
+}

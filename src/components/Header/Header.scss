@@ -1,0 +1,21 @@
+@import "../../sass/helpers/variables";
+@import "../../sass/helpers/mixins";
+
+header {
+    border-bottom:1px solid rgba($pale,.1);
+    background-image: url('../../assets/bg.png');
+    background-size: cover;
+    h2 {
+        font-size: 100px;
+        padding-left: 90px;
+        @include res(md) {
+            font-size: 60px;
+              padding-left: 0
+        }
+        @include res(sm) {
+            font-size: 50px;
+            
+        }
+    }
+    
+}

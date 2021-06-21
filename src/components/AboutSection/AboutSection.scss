@@ -1,0 +1,62 @@
+@import "../../sass/helpers/variables";
+@import "../../sass/helpers/mixins";
+.about-section {
+    .youtube-video {
+        background-color: rgba($black,.9);
+        z-index: 1000;
+        top: 0;
+        iframe {
+            width: 70%;
+            height: 70%;
+        }
+        button {
+            background: none;
+            color: $light;
+            font-size: 30px;
+            top: 7%;
+            right:7%
+        }
+    }
+  .text {
+    background-image: url("../../assets/props.png");
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    
+    p {
+      font-size: 18px;
+      color: $pale;
+      line-height: 1.8;
+      @include res(md) {
+          br {
+              display: none;
+          }
+      }
+    }
+  }
+  .vid {
+    border-radius: 50% 0 0 50%;
+    img {
+      width: 100%;
+      border-radius: inherit;
+      transition: .3s;
+      
+    }
+    button {
+    background: none;
+    font-size: 100px;
+    color: $light;
+    top: 35%;
+    left: 44%;
+    @include res(md) {
+      top: 15%;
+    }
+    @include res(sm) {
+      top: 35%;
+    }
+  }
+  &:hover img {
+      filter: brightness(50%);
+  }
+  }
+  
+}

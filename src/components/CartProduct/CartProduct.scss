@@ -1,0 +1,29 @@
+@import '../../sass/helpers/variables';
+@import '../../sass/helpers/mixins';
+.product-table {
+    border-color: rgba($pale, 0.1) !important;
+    color: $pale;
+    
+    .close {
+        button {
+            background: none;
+            
+        }
+    }
+    .amount {
+      div {
+        background: none !important;
+        button {
+            background: none;
+            color: $light;
+        }
+        border-color: rgba($pale, 0.1) !important;
+      }
+    }
+    .total {
+        display: none;
+        @include res(sm) {
+            display: block;
+        }
+    }
+  }

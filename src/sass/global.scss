@@ -1,0 +1,133 @@
+@import "./helpers/variables";
+@import "./helpers/_mixins";
+
+* {
+  box-sizing: border-box !important;
+}
+body {
+  font-family: $global-font;
+  color: $white !important;
+  overflow-x: hidden;
+}
+input,
+button,
+select {
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $secondary-font;
+}
+.big-head-1 {
+  font-size: 72px;
+  @include res(md) {
+    font-size: 60px;
+  }
+  @include res(sm) {
+    font-size: 50px;
+  }
+  @include res(xs) {
+    font-size: 35px;
+  }
+}
+.big-head-2 {
+  font-size: 48px;
+  @include res(md) {
+    font-size: 37px;
+  }
+  @include res(sm) {
+    font-size: 29px;
+  }
+  @include res(xs) {
+    font-size: 24px;
+  }
+}
+.border-pale {
+  border-bottom: 1px solid rgba($pale, 0.1) !important;
+}
+ul {
+  list-style: none;
+
+  padding: 0 !important;
+}
+a {
+  text-decoration: none;
+}
+button {
+  background: none;
+}
+.user-btn {
+  border-radius: 100px;
+  padding: 15px 45px;
+  border: 2px solid $light;
+  color: $pale !important;
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-transform: uppercase;
+  i {
+    transition: 0.3s;
+  }
+  &:hover {
+    background-color: $light;
+    color: $white !important;
+  }
+  &:hover i {
+    margin-left: 10px;
+  }
+}
+.admin-btn {
+  border-radius: 5px;
+  padding: 7px 15px;
+  color: $white !important;
+  letter-spacing: 2px;
+  font-weight: bold;
+  border: 0;
+  font-size: 15px;
+}
+.user-input {
+  padding: 15px 30px;
+  border-radius: 40px 0 0;
+  border: 0;
+  background-color: rgba($pale, 0.1);
+  width: 100%;
+  color: rgba($pale, 1);
+  &:focus {
+    @extend .user-input;
+  }
+  &::placeholder {
+    color: rgba($pale, 0.5);
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+}
+
+.user-select {
+  font-weight: bold;
+  @extend .user-input;
+
+  &:focus {
+    color: rgba($pale, 0.5);
+  }
+}
+
+.color-light {
+  color: $light !important;
+}
+
+.user-form {
+  width: 45%;
+  @include res(md) {
+    width: 70%;
+  }
+  @include res(xs) {
+    width: 95%;
+  }
+}
+nav {
+  border-bottom: 1px solid rgba($pale, 0.1) !important;
+}

@@ -1,0 +1,53 @@
+@import "../../../sass/helpers/variables";
+@import "../../../sass/helpers/_mixins";
+
+nav {
+    border-bottom: 1px solid rgba($pale,.1);
+    background-color: $dark;
+    @include res(lg) {
+      padding-top: 0 !important;
+    }
+  
+  .navbar-nav {
+    .nav-item {
+      .nav-link {
+          color : $pale !important;
+          margin-right: 28px;
+          text-transform: capitalize;
+         @include res(lg) {
+            border-top: 2px solid transparent;
+          &:hover {
+            border-top: 2px solid $white;
+            color: $white !important;
+          }
+         }
+      }
+      .active {
+          color: $white !important;
+          @include res(lg) {
+            border-top: 2px solid $white;
+          }
+      }
+    }
+  }
+  .cart {
+    font: {
+      size: 20px
+    };
+   a {
+      color : $white;
+   }
+   .amount {
+     border-radius: 50%;
+     background-color: $light !important;
+     color: $dark;
+     font-size: 10px;
+     $WH : 15px;
+     width: $WH;
+     height: $WH;
+     line-height: $WH;
+     top:10px;
+     left: 12px;
+   }
+  }
+}
